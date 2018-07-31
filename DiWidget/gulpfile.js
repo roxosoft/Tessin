@@ -38,6 +38,7 @@ gulp.task('compile-img', function(){
     './src/img/2.jpg',
     './src/img/3.jpg',
     './src/img/logo.svg',
+    './src/img/loading.svg',
     './src/js/main.js'
   ])
     .pipe(gulp.dest('./dist/test/'))

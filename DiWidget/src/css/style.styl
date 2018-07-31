@@ -27,23 +27,25 @@
 }
 .b-main {
   width: 590px;
-  height: 290px;
+  height: fit-content;
   box-sizing: border-box;
   font-family: fonts,sans-serif;
+  position: relative
   /* width: 100%; */
-  background: #f7eae4;
-  padding: 5px 0;
-  .b-head {
-    font-family: fonts, sans-serif;
-    text-transform: uppercase;
-    margin-left: 5px;
-    display flex
-    overflow: hidden;
+
+  .b-loader {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
   }
+
   .b-block {
-    margin: 5px;
     background: #ead7d0;
     border: 1px solid #d9c7c0;
+    box-sizing: border-box;
   }
   .b-headerText {
     font-weight: bold;
@@ -87,6 +89,10 @@
     &:last-child {
       padding-right: 0;
     }
+
+    .text {
+      height: 28px;
+    }
   }
   .b-buttonBlock {
     font-family: fonts, sans-serif;
@@ -107,6 +113,9 @@
         height: 36px;
         margin-left: 5px;
         padding:0;
+      }
+      a {
+        display: flex;
       }
     }
   }
