@@ -1,0 +1,45 @@
+
+<!-- inject-css ../../dist/test/style.css -->
+<!-- inject-css ../../dist/test/font.css -->
+
+<script>
+  var clickUrl = '_ADCLICK_';
+
+  function clickit(id){
+    var wrapper = document.getElementById(id);
+    var frameIt = document.createElement('iframe');
+    frameIt.src = '_ADPATH_tag.html';
+    frameIt.style.width = "1px";
+    frameIt.style.height = "1px";
+    frameIt.style.display = "none";
+    wrapper.appendChild(frameIt);
+    window.open(clickUrl, '_blank');
+  }
+</script>
+
+<div class="b-banner wrapper" id="quad_ADTIME_" onclick="clickit('quad_ADTIME_')">
+
+    <div class="b-logo"></div>
+
+    <div class="b-header">
+        <b>Investera</b> i fastigheter
+    </div>
+
+    <div class="b-text">
+        Bygg din portfölj med<br />
+        säkerställda fastighetslån
+    </div>
+
+    <div class="b-button">
+        LÄS MER
+    </div>
+
+    <div class="b-text _small">
+        <span>JUST NU</span>
+        Pendligsnara parhus norr<br />
+        om Stocklohlm
+    </div>
+
+    <div class="b-illustration"></div>
+
+</div>

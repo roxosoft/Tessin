@@ -1,0 +1,129 @@
+@import 'normalize.styl';
+
+.b-header {
+  font-size: 135%;
+  font-weight: 300;
+
+  b {
+    font-weight: 700;
+  }
+}
+
+.b-button {
+  background-color: rgba(133, 74, 213, 1);
+  padding: 0 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  height: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  transition: .1s all ease-in-out;
+
+  &:hover {
+    background-color: darken(rgba(133, 74, 213, 1), 10);
+  }
+}
+.b-main {
+  width: 590px;
+  height: 290px;
+  box-sizing: border-box;
+  font-family: fonts,sans-serif;
+  /* width: 100%; */
+  background: #f7eae4;
+  padding: 5px 0;
+  .b-head {
+    font-family: fonts, sans-serif;
+    text-transform: uppercase;
+    margin-left: 5px;
+    display flex
+    overflow: hidden;
+  }
+  .b-block {
+    margin: 5px;
+    background: #ead7d0;
+    border: 1px solid #d9c7c0;
+  }
+  .b-headerText {
+    font-weight: bold;
+    background: #a81712;
+    color: white;
+    padding:10px;
+  }
+  .b-blockImg {
+    display: flex;
+    margin: 10px;
+  }
+  .b-line{
+    margin-top: 6px;
+    margin-left: 10px;
+    width: 100%;
+    height: 6px;
+    background: #ceb4a7;
+  }
+  .b-img__a {
+    width: 100%;
+    height: 95px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 100%;
+  }
+  .b-img {
+    width: 100%;
+    height: 95px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 100%;
+  }
+  .b-smallBlockImg {
+    font-family: fonts, sans-serif;
+    font-weight: bold;
+    font-size: 80%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .b-buttonBlock {
+    font-family: fonts, sans-serif;
+    margin: 0 10px;
+    line-height: 36px;
+    display: flex;
+    font-size: 80%;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    .b-buttonBlockText {
+      display: flex;
+      &__text {
+        width: 100px;
+      }
+      .b-svg{
+        width 100px;
+        height: 36px;
+        margin-left: 5px;
+        padding:0;
+      }
+    }
+  }
+  .b-button {
+    font-family: fonts, sans-serif;
+    padding: 5px 60px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    line-height: 0;
+    font-size: 100%;
+    font-weight: bold;
+    background: #174f74;
+    text-transform: none;
+    &:hover {
+      background: #174f74;
+      opacity: 0.8;
+    }
+  }
+}
