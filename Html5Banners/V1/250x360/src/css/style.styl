@@ -1,6 +1,7 @@
 @import 'normalize.styl';
 
 .b-logo {
+  margin-top: 10px;
   background-image: url('logo.svg');
   background-size: contain;
   background-position: center center;
@@ -15,11 +16,10 @@
   height: 360px;
   background: rgba(255, 255, 255, 1);
   overflow: hidden;
-  padding: 5px 20px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom center;
@@ -84,10 +84,11 @@
 .b-illustration {
   position: relative;
   overflow: hidden;
-  height: fit-content;
+  height: 70px;
+  width: 100%;
 
   .back {
-    height: 70px;
+    height: 100%;
     width: 114%;
     object-fit: cover;
   }
