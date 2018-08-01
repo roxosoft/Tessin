@@ -20,7 +20,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-image: url('image.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom center;
@@ -79,5 +78,23 @@
 
   &:hover {
     background-color: darken(rgba(133, 74, 213, 1), 10);
+  }
+}
+
+.b-illustration {
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+
+  .back {
+    height: 70px;
+    width: 114%;
+    object-fit: cover;
+  }
+
+  .stroke {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
