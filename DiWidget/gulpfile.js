@@ -16,11 +16,7 @@ var merge        = require('merge-stream');
 
 gulp.task('default', function() {
 
-	gulp.run (['compile-styl']);
-	gulp.run (['compile-html']);
-	gulp.run (['compile-img']);
-	gulp.run (['compile-fonts']);
-    gulp.run (['compile-html-prod']);
+    gulp.run (['compile-banner']);
 
 	browserSync.init({
 		server: "./dist/test/"
@@ -32,17 +28,21 @@ gulp.task('default', function() {
 
 });
 
-gulp.task('compile-img', function(){
-  return gulp.src([
-    './src/img/1.jpeg',
-    './src/img/2.jpg',
-    './src/img/3.jpg',
-    './src/img/logo.svg',
-    './src/img/loading.svg',
-    './src/js/main.js'
-  ])
-    .pipe(gulp.dest('./dist/test/'))
-    .pipe(gulp.dest('./dist/prod/'));
+gulp.task('compile-svg', function () {
+    return gulp.src([
+        './src/img/loading.svg',
+        './src/img/logo.svg',
+    ])
+        .pipe(gulp.dest('./dist/test/'))
+        .pipe(gulp.dest('./dist/prod/'));
+});
+
+gulp.task('compile-js', function () {
+    return gulp.src([
+        './src/js/main.js'
+    ])
+        .pipe(gulp.dest('./dist/test/'))
+        .pipe(gulp.dest('./dist/prod/'));
 });
 
 gulp.task('compile-styl', function(){
@@ -62,7 +62,7 @@ gulp.task('compile-styl', function(){
 		.pipe(browserSync.stream());
 });
 
-gulp.task('compile-html', function(){
+gulp.task('compile-html', ['compile-js', 'compile-svg', 'compile-fonts', 'compile-styl'], function(){
 
   data = {
     _ADPATH_  : '',
@@ -78,7 +78,7 @@ gulp.task('compile-html', function(){
     .pipe(gulp.dest('./dist/test/'));
 });
 
-gulp.task('compile-html-prod', [ 'compile-fonts', 'compile-styl'], function(){
+gulp.task('compile-html-prod', [ 'compile-html'], function(){
   data = {
     _ADPATH_  : '',
     _ADCLICK_ : '_ADCLICK_',
@@ -103,45 +103,24 @@ gulp.task('compile-html-prod', [ 'compile-fonts', 'compile-styl'], function(){
     .pipe(gulp.dest('./dist/prod/'));
 });
 
-gulp.task('compile-banner', function(cb){
-  data = {
+gulp.task('compile-banner', ['compile-html-prod'], function(cb){
+    data = {
     _ADPATH_  : '',
     _ADCLICK_ : '_ADCLICK_',
     _ADCUID_  : '_ADCUID_',
     _ADADID_  : '_ADADID_',
     _ADBNID_  : '_ADBNID_',
     _ADTIME_  : '_ADTIME_'
-	};
+    };
 
-  var banner = gulp.src('./src/templates/index.html')
-    .pipe(nunjucks.compile(data))
-    .pipe(injectCSS())
-    .pipe(minify({
-      minify: true,
-      minifyJS: true,
-      uglifyJS: true,
-      uglifyCSS: true,
-      minifyCSS: true,
-      minifyHTML: true,
-      collapseWhitespace: true
-    }))
-    .pipe(gulp.dest('./dist/prod/'));
-
-  var zipIt = gulp.src([
+    return gulp.src([
     './dist/prod/index.html',
-    './src/img/1.jpeg',
-    './src/img/2.jpg',
-    './src/img/3.jpg',
-    './src/img/logo.svg',
-    './src/js/main.js'
+    './dist/prod/loading.svg',
+    './dist/prod/logo.svg',
+    './dist/prod/main.js',
   ])
     .pipe(zip('widget.zip'))
     .pipe(gulp.dest('./dist/prod/'));
-
-  // var cleanUp = gulp.src(['./dist/prod/banner.html', './dist/prod/image.png'], {read: false})
-  //   .pipe(clean());
-
-  return merge(banner, zipIt);
 
 });
 
