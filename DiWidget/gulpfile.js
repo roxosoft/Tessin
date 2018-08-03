@@ -20,7 +20,7 @@ gulp.task('default', function() {
 	gulp.run (['compile-html']);
 	gulp.run (['compile-img']);
 	gulp.run (['compile-fonts']);
-  gulp.run (['compile-html-prod']);
+    gulp.run (['compile-html-prod']);
 
 	browserSync.init({
 		server: "./dist/test/"
@@ -28,7 +28,7 @@ gulp.task('default', function() {
 
 	gulp.watch('./src/css/**/*.styl', ['compile-styl', 'compile-fonts']);
 	gulp.watch('./src/templates/**/*.html', ['compile-styl', 'compile-fonts', 'compile-html', 'compile-banner']);
-  gulp.watch('./src/js/*.js', ['compile-js']);
+    gulp.watch('./src/js/*.js', ['compile-js']);
 
 });
 
@@ -58,6 +58,7 @@ gulp.task('compile-styl', function(){
 			collapseWhitespace: true
 		}))
 		.pipe(gulp.dest('./dist/test/'))
+        .pipe(gulp.dest('./src/compiled-styles/'))
 		.pipe(browserSync.stream());
 });
 
@@ -77,7 +78,7 @@ gulp.task('compile-html', function(){
     .pipe(gulp.dest('./dist/test/'));
 });
 
-gulp.task('compile-html-prod', function(){
+gulp.task('compile-html-prod', [ 'compile-fonts', 'compile-styl'], function(){
   data = {
     _ADPATH_  : '',
     _ADCLICK_ : '_ADCLICK_',
@@ -163,6 +164,7 @@ gulp.task('compile-fonts', function() {
 
   return fontStream
     .pipe(concat('font.css'))
+    .pipe(gulp.dest('./src/compiled-styles/'))
     .pipe(gulp.dest('./dist/test/'));
 
 });
