@@ -18,9 +18,9 @@ gulp.task('default', function() {
 
 	gulp.run (['compile-styl']);
 	gulp.run (['compile-html']);
-  gulp.run (['compile-html-prod']);
 	gulp.run (['compile-img']);
 	gulp.run (['compile-fonts']);
+  gulp.run (['compile-html-prod']);
 
 	browserSync.init({
 		server: "./dist/test/"
@@ -87,7 +87,7 @@ gulp.task('compile-html-prod', function(){
     _ADTIME_  : '_ADTIME_'
   };
 
-  return gulp.src('./src/templates/inc/index.html')
+  return gulp.src('./src/templates/index.html')
     .pipe(nunjucks.compile(data))
     .pipe(injectCSS())
     .pipe(minify({
@@ -112,7 +112,7 @@ gulp.task('compile-banner', function(cb){
     _ADTIME_  : '_ADTIME_'
 	};
 
-  var banner = gulp.src('./src/templates/inc/index.html')
+  var banner = gulp.src('./src/templates/index.html')
     .pipe(nunjucks.compile(data))
     .pipe(injectCSS())
     .pipe(minify({

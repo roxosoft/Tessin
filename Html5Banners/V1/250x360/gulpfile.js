@@ -94,7 +94,7 @@ gulp.task('compile-html-prod', ['compile-styl', 'compile-img', 'compile-fonts'],
 
 gulp.task('compile-banner', ['compile-html', 'compile-html-prod'], function(){
 
-  return gulp.src(['./dist/prod/index.html', './dist/prod/image.svg', './dist/prod/logo.svg'])
+  return gulp.src(['./dist/prod/index.html', './dist/prod/image.jpg', './dist/prod/logo.svg', './dist/prod/stroke.svg'])
     .pipe(zip('Banner_V1_250x360.zip'))
     .pipe(gulp.dest('./dist/prod/'));
 });
