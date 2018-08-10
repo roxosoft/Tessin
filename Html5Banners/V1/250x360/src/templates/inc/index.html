@@ -5,19 +5,24 @@
 <script>
   var clickUrl = '_ADCLICK_';
   function clickit(id){
-    var wrapper = document.getElementById(id);
-    var frameIt = document.createElement('iframe');
-    frameIt.src = '_ADPATH_tag.html';
-    frameIt.style.width = "1px";
-    frameIt.style.height = "1px";
-    frameIt.style.display = "none";
-    wrapper.appendChild(frameIt);
-    window.open(clickUrl, '_blank');
+    if (id === 'static') {
+        window.open('https://tessin.se/');
+    } else if (id === 'quad_ADTIME_') {
+        var wrapper = document.getElementById(id);
+        var frameIt = document.createElement('iframe');
+        frameIt.src = '_ADPATH_tag.html';
+        frameIt.style.width = "1px";
+        frameIt.style.height = "1px";
+        frameIt.style.display = "none";
+        wrapper.appendChild(frameIt);
+        window.open(clickUrl, '_blank');
+    }
+
   }
 </script>
 
 {% if _ADPATH_ === undefined %}
-<a href="https://tessin.se/">
+<div class="b-banner wrapper" id="static" onclick="clickit('static')">
     <div class="b-logo"></div>
 
     <div class="b-header">
@@ -43,7 +48,7 @@
         <img class="stroke" src="stroke.svg">
         <img class="back" src="image.jpg">
     </div>
-</a>
+</div>
 {% endif %}
 
 {% if _ADPATH_ !== undefined %}

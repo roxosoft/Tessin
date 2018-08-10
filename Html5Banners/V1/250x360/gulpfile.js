@@ -96,6 +96,7 @@ gulp.task('compile-html-prod', ['compile-styl', 'compile-img', 'compile-fonts'],
 
 gulp.task('compile-html-prod-static', ['compile-styl', 'compile-img', 'compile-fonts'], function(){
     return gulp.src('./src/templates/index.html')
+        .pipe(nunjucks.compile())
         .pipe(injectCSS())
         .pipe(minify({
             minify: true,
