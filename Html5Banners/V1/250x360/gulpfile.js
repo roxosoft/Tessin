@@ -8,7 +8,6 @@ var stylus       = require('gulp-stylus');
 var nunjucks     = require('gulp-nunjucks');
 var minify       = require('gulp-minifier');
 var browserSync  = require('browser-sync').create();
-var inline       = require('gulp-inline-fonts');
 var concat       = require('gulp-concat');
 var clean = require('gulp-clean');
 const zip        = require('gulp-zip');
@@ -23,8 +22,8 @@ gulp.task('default', function() {
     server: "./dist/test/"
   });
 
-  gulp.watch('./src/css/**/*.styl', ['compile-styl', 'compile-fonts']);
-  gulp.watch('./src/templates/**/*.html', ['compile-styl', 'compile-fonts', 'compile-html', 'compile-banner']);
+  gulp.watch('./src/css/**/*.styl', ['compile-styl']);
+  gulp.watch('./src/templates/**/*.html', ['compile-styl', 'compile-html', 'compile-banner']);
   gulp.watch('./src/js/**/*.js', ['compile-js']);
 
 });
@@ -32,8 +31,8 @@ gulp.task('default', function() {
 gulp.task('compile-img', function(){
    gulp.src('./src/img/*')
     .pipe(gulp.dest('./dist/test/'))
-    .pipe(gulp.dest('./dist/prod-static/'))
-    .pipe(gulp.dest('./dist/prod/'));
+    .pipe(gulp.dest('./dist/public-adtech/'))
+    .pipe(gulp.dest('./dist/public-adtoma/'));
 });
 
 gulp.task('compile-styl', function(){
@@ -52,7 +51,7 @@ gulp.task('compile-styl', function(){
     .pipe(browserSync.stream());
 });
 
-gulp.task('compile-html', ['compile-styl', 'compile-img', 'compile-fonts'] ,function(){
+gulp.task('compile-html', ['compile-styl', 'compile-img'] ,function(){
 
   data = {
     _ADPATH_  : '',
@@ -69,7 +68,7 @@ gulp.task('compile-html', ['compile-styl', 'compile-img', 'compile-fonts'] ,func
     .pipe(gulp.dest('./dist/test/'));
 });
 
-gulp.task('compile-html-prod', ['compile-styl', 'compile-img', 'compile-fonts'], function(){
+gulp.task('compile-html-prod', ['compile-styl', 'compile-img'], function(){
   data = {
     _ADPATH_  : '',
     _ADCLICK_ : '_ADCLICK_',
@@ -91,10 +90,10 @@ gulp.task('compile-html-prod', ['compile-styl', 'compile-img', 'compile-fonts'],
       minifyHTML: true,
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest('./dist/prod/'));
+    .pipe(gulp.dest('./dist/public-adtech/'));
 });
 
-gulp.task('compile-html-prod-static', ['compile-styl', 'compile-img', 'compile-fonts'], function(){
+gulp.task('compile-html-prod-static', ['compile-styl', 'compile-img'], function(){
     return gulp.src('./src/templates/index.html')
         .pipe(nunjucks.compile())
         .pipe(injectCSS())
@@ -107,42 +106,27 @@ gulp.task('compile-html-prod-static', ['compile-styl', 'compile-img', 'compile-f
             minifyHTML: true,
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest('./dist/prod-static/'));
+        .pipe(gulp.dest('./dist/public-adtoma/'));
 });
 
 gulp.task('compile-banner', ['compile-html', 'compile-html-prod'], function(){
 
-  return gulp.src(['./dist/prod/index.html', './dist/prod/image.jpg', './dist/prod/logo.svg', './dist/prod/stroke.svg'])
-    .pipe(zip('Banner_V1_250x360.zip'))
-    .pipe(gulp.dest('./dist/'));
+    return gulp.src(['./dist/public-adtech/index.html', './dist/public-adtech/image.jpg', './dist/public-adtech/logo.svg', './dist/public-adtech/stroke.svg'])
+        .pipe(zip('adtech.zip'))
+        .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-static', ['compile-html-prod-static'], function(){
 
-    return gulp.src(['./dist/prod-static/index.html', './dist/prod-static/image.jpg', './dist/prod-static/logo.svg', './dist/prod-static/stroke.svg'])
-        .pipe(zip('Banner_V1_250x360-static.zip'))
+    return gulp.src(['./dist/public-adtoma/index.html', './dist/public-adtoma/image.jpg', './dist/public-adtoma/logo.svg', './dist/public-adtoma/stroke.svg'])
+        .pipe(zip('adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-js', function(){
   return gulp.src('./src/js/*.js')
     .pipe(gulpBrowser.browserify())
-    .pipe(gulp.dest('./dist/prod-static/js/'))
-    .pipe(gulp.dest('./dist/prod/js/'))
+    .pipe(gulp.dest('./dist/public-adtoma/js/'))
+    .pipe(gulp.dest('./dist/public-adtech/js/'))
     .pipe(gulp.dest('./dist/test/js/'));
-});
-
-gulp.task('compile-fonts', function() {
-
-  var fontStream = merge();
-
-  [300, 700].forEach(function(weight) {
-    fontStream
-      .add(gulp.src(`./src/fonts/${weight}.otf`)
-        .pipe(inline({ name: 'font', weight: weight, formats: ['otf'] })));
-  });
-
-  return fontStream
-    .pipe(concat('font.css'))
-    .pipe(gulp.dest('./dist/test/'));
 });

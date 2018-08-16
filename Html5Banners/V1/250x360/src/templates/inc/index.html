@@ -1,12 +1,12 @@
 
 <!-- inject-css ../../dist/test/style.css -->
-<!-- inject-css ../../dist/test/font.css -->
 
 <script>
+  var clickTag = 'https://tessin.se';
   var clickUrl = '_ADCLICK_';
   function clickit(id){
     if (id === 'static') {
-        window.open('https://tessin.se/');
+        window.open(clickTag);
     } else if (id === 'quad_ADTIME_') {
         window.open(clickUrl, '_blank');
     }
