@@ -113,14 +113,14 @@ gulp.task('compile-html-prod-static', ['compile-styl', 'compile-img', 'compile-f
 gulp.task('compile-banner', ['compile-html', 'compile-html-prod'], function(){
 
     return gulp.src(['./dist/public-adtech/index.html', './dist/public-adtech/image.jpg', './dist/public-adtech/logo.svg', './dist/public-adtech/stroke.svg'])
-        .pipe(zip('adtech.zip'))
+        .pipe(zip('Banner_V1_250x360-adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-static', ['compile-html-prod-static'], function(){
 
     return gulp.src(['./dist/public-adtoma/index.html', './dist/public-adtoma/image.jpg', './dist/public-adtoma/logo.svg', './dist/public-adtoma/stroke.svg'])
-        .pipe(zip('adtoma.zip'))
+        .pipe(zip('Banner_V1_250x360-adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
