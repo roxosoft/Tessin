@@ -9,6 +9,7 @@ var nunjucks     = require('gulp-nunjucks');
 var minify       = require('gulp-minifier');
 var browserSync  = require('browser-sync').create();
 var concat       = require('gulp-concat');
+var inline       = require('gulp-inline-fonts');
 var clean = require('gulp-clean');
 const zip        = require('gulp-zip');
 var merge        = require('merge-stream');
@@ -22,8 +23,8 @@ gulp.task('default', function() {
     server: "./dist/test/"
   });
 
-  gulp.watch('./src/css/**/*.styl', ['compile-styl']);
-  gulp.watch('./src/templates/**/*.html', ['compile-styl', 'compile-html', 'compile-banner']);
+  gulp.watch('./src/css/**/*.styl', ['compile-styl', 'compile-fonts']);
+  gulp.watch('./src/templates/**/*.html', ['compile-styl', 'compile-fonts', 'compile-html', 'compile-banner']);
   gulp.watch('./src/js/**/*.js', ['compile-js']);
 
 });
@@ -51,7 +52,7 @@ gulp.task('compile-styl', function(){
     .pipe(browserSync.stream());
 });
 
-gulp.task('compile-html', ['compile-styl', 'compile-img'] ,function(){
+gulp.task('compile-html', ['compile-styl', 'compile-img', 'compile-fonts'] ,function(){
 
   data = {
     _ADPATH_  : '',
@@ -68,7 +69,7 @@ gulp.task('compile-html', ['compile-styl', 'compile-img'] ,function(){
     .pipe(gulp.dest('./dist/test/'));
 });
 
-gulp.task('compile-html-prod', ['compile-styl', 'compile-img'], function(){
+gulp.task('compile-html-prod', ['compile-styl', 'compile-img', 'compile-fonts'], function(){
   data = {
     _ADPATH_  : '',
     _ADCLICK_ : '_ADCLICK_',
@@ -93,7 +94,7 @@ gulp.task('compile-html-prod', ['compile-styl', 'compile-img'], function(){
     .pipe(gulp.dest('./dist/public-adtech/'));
 });
 
-gulp.task('compile-html-prod-static', ['compile-styl', 'compile-img'], function(){
+gulp.task('compile-html-prod-static', ['compile-styl', 'compile-img', 'compile-fonts'], function(){
     return gulp.src('./src/templates/index.html')
         .pipe(nunjucks.compile())
         .pipe(injectCSS())
@@ -129,4 +130,19 @@ gulp.task('compile-js', function(){
     .pipe(gulp.dest('./dist/public-adtoma/js/'))
     .pipe(gulp.dest('./dist/public-adtech/js/'))
     .pipe(gulp.dest('./dist/test/js/'));
+});
+
+gulp.task('compile-fonts', function() {
+
+    var fontStream = merge();
+
+    [300, 700].forEach(function(weight) {
+        fontStream
+            .add(gulp.src(`./src/fonts/${weight}.otf`)
+                .pipe(inline({ name: 'font', weight: weight, formats: ['otf'] })));
+    });
+
+    return fontStream
+        .pipe(concat('font.css'))
+        .pipe(gulp.dest('./dist/test/'));
 });
