@@ -1,0 +1,101 @@
+@import 'normalize.styl';
+
+.b-logo {
+  margin-top: 10px;
+  background-image: url('logo.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 70px;
+}
+
+.b-banner {
+  font-family: font, sans-serif;
+  width: 250px;
+  height: 360px;
+  background: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+  color: rgba(80, 80, 80, 1);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &>* {
+    text-decoration: none;
+  }
+
+
+}
+
+.b-header {
+  font-size: 135%;
+  font-weight: 300;
+
+  b {
+    font-weight: 700;
+  }
+}
+
+
+.b-text {
+  span {
+    //font-size: 85%;
+    display: block;
+    color: rgba(15, 173, 140, 1);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &._small {
+    font-size: 85%;
+    font-weight: 400;
+  }
+}
+
+.b-button {
+  background-color: rgba(133, 74, 213, 1);
+  padding: 0 42px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  height: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  transition: .1s all ease-in-out;
+
+  &:hover {
+    background-color: darken(rgba(133, 74, 213, 1), 10);
+  }
+}
+
+.b-illustration {
+  position: relative;
+  overflow: hidden;
+  height: 70px;
+  width: 100%;
+
+  .back {
+    height: 100%;
+    width: 114%;
+    object-fit: cover;
+  }
+
+  .stroke {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

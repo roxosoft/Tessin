@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 222 320">
+    <polygon points="0,325 0,-5 107,-5 5,325" style="fill:rgb(255,255,255)" />
+    <line x1="3" y1="325" x2="107" y2="-5" style="stroke:rgb(0,183,151);stroke-width:8" />
+</svg>

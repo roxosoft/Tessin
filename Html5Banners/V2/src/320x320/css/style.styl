@@ -1,0 +1,123 @@
+@import 'normalize.styl';
+
+.b-logo {
+  background-image: url('logo.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 48px;
+  width: 66px;
+}
+
+.b-banner {
+  font-family: font, sans-serif;
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+  color: rgba(80, 80, 80, 1);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding-left: 23px;
+
+  &>* {
+    text-decoration: none;
+  }
+
+
+}
+
+.b-header {
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 29px;
+  margin-bottom: 23px;
+  b {
+    font-weight: 700;
+  }
+}
+
+
+.b-text {
+  font-size: 15px;
+
+  span {
+    display: block;
+    color: rgba(15, 173, 140, 1);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.b-text-just {
+  font-size: 80%;
+  font-weight: 400;
+  position: relative;
+  top: 22px;
+  z-index: 1;
+
+  span {
+    display: block;
+    color: rgba(15, 173, 140, 1);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.b-button {
+  background-color: rgba(133, 74, 213, 1);
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  width: 145px;
+  font-weight: 400;
+  margin-top: 37px;
+
+  transition: .1s all ease-in-out;
+
+  &:hover {
+    background-color: darken(rgba(133, 74, 213, 1), 10);
+  }
+}
+
+.b-desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 14px;
+  box-sizing: border-box;
+}
+
+.b-illustration {
+  left: -23px;
+  position: relative;
+  overflow: visible;
+  height: fit-content;
+
+  .back {
+    height: 65px;
+    width: 320px;
+    object-fit: cover;
+  }
+
+  .stroke {
+    position: absolute;
+    top: -6px;
+    left: 0;
+  }
+}
