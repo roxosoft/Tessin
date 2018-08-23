@@ -1,5 +1,5 @@
 
-<!-- inject-css ../../../dist/test/250x360/style.css -->
+<!-- inject-css ../../../dist/styles/980x240/style.css -->
 
 <script>
     var clickTag = 'https://tessin.se';
@@ -16,40 +16,11 @@
 
 {% if _ADPATH_ === undefined %}
 <div class="b-banner wrapper" id="static" onclick="clickit('static')">
-    <div class="b-left">
-        <div class="b-logo"></div>
-
-        <div class="b-header">
-            <b>Investera</b> i fastigheter
-        </div>
-
-        <div class="b-text">
-            Bygg din portfölj med säkerställda fastighetslån
-        </div>
-
-        <div class="b-button">
-            LÄS MER
-        </div>
-    </div>
-
-    <div class="b-illustration">
-        <img class="stroke" src="stroke.svg">
-        <img class="back" src="image.jpg">
-    </div>
-
-    <div class="b-right">
-
-        <div class="b-text _small">
-            <span>JUST NU</span>
-            Slutsålda kedjehus i <br/>Sollentuna
-        </div>
-    </div>
-</div>
 {% endif %}
-
 {% if _ADPATH_ !== undefined %}
-<!-- inject-css ../../../dist/test/250x360/font.css -->
+<!-- inject-css ../../../dist/styles/980x240/font.css -->
 <div class="b-banner wrapper" id="quad_ADTIME_" onclick="clickit('quad_ADTIME_')">
+{% endif %}
     <div class="b-left">
         <div class="b-logo"></div>
 
@@ -79,4 +50,3 @@
         </div>
     </div>
 </div>
-{% endif %}
