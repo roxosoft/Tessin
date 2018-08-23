@@ -608,14 +608,14 @@ gulp.task('compile-html-adtoma-468x240', ['compile-styl-468x240', 'compile-img-4
 
 gulp.task('compile-banner-adtech-468x240', ['compile-html-adtech-468x240'], function(){
 
-    return gulp.src(['./dist/public-adtech/468x240/index.html', './dist/public-adtech/468x240/image.jpg', './dist/public-adtech/468x240/logo.svg', './dist/public-adtech/468x240/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/468x240/index.html', './dist/public-adtech/468x240/image.jpg', './dist/public-adtech/468x240/logo.png', './dist/public-adtech/468x240/stroke.svg'])
         .pipe(zip('Banner_V2_468x240-adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-468x240', ['compile-html-adtoma-468x240'], function(){
 
-    return gulp.src(['./dist/public-adtoma/468x240/index.html', './dist/public-adtech/468x240/image.jpg', './dist/public-adtoma/468x240/logo.svg', './dist/public-adtoma/468x240/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/468x240/index.html', './dist/public-adtech/468x240/image.jpg', './dist/public-adtoma/468x240/logo.png', './dist/public-adtoma/468x240/stroke.svg'])
         .pipe(zip('Banner_V2_468x240-adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -708,14 +708,14 @@ gulp.task('compile-html-adtoma-480x280', ['compile-styl-480x280', 'compile-img-4
 
 gulp.task('compile-banner-adtech-480x280', ['compile-html-adtech-480x280'], function(){
 
-    return gulp.src(['./dist/public-adtech/480x280/index.html', './dist/public-adtech/480x280/image.jpg', './dist/public-adtech/480x280/logo.svg', './dist/public-adtech/480x280/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/480x280/index.html', './dist/public-adtech/480x280/image.jpg', './dist/public-adtech/480x280/logo.png', './dist/public-adtech/480x280/stroke.svg'])
         .pipe(zip('Banner_V2_480x280-adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-480x280', ['compile-html-adtoma-480x280'], function(){
 
-    return gulp.src(['./dist/public-adtoma/480x280/index.html', './dist/public-adtech/480x280/image.jpg', './dist/public-adtoma/480x280/logo.svg', './dist/public-adtoma/480x280/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/480x280/index.html', './dist/public-adtech/480x280/image.jpg', './dist/public-adtoma/480x280/logo.png', './dist/public-adtoma/480x280/stroke.svg'])
         .pipe(zip('Banner_V2_480x280-adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -808,14 +808,14 @@ gulp.task('compile-html-adtoma-480x320', ['compile-styl-480x320', 'compile-img-4
 
 gulp.task('compile-banner-adtech-480x320', ['compile-html-adtech-480x320'], function(){
 
-    return gulp.src(['./dist/public-adtech/480x320/index.html', './dist/public-adtech/480x320/image.jpg', './dist/public-adtech/480x320/logo.svg', './dist/public-adtech/480x320/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/480x320/index.html', './dist/public-adtech/480x320/image.jpg', './dist/public-adtech/480x320/logo.png', './dist/public-adtech/480x320/stroke.svg'])
         .pipe(zip('Banner_V2_480x320-adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-480x320', ['compile-html-adtoma-480x320'], function(){
 
-    return gulp.src(['./dist/public-adtoma/480x320/index.html', './dist/public-adtech/480x320/image.jpg', './dist/public-adtoma/480x320/logo.svg', './dist/public-adtoma/480x320/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/480x320/index.html', './dist/public-adtech/480x320/image.jpg', './dist/public-adtoma/480x320/logo.png', './dist/public-adtoma/480x320/stroke.svg'])
         .pipe(zip('Banner_V2_480x320-adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -908,14 +908,14 @@ gulp.task('compile-html-adtoma-844x178', ['compile-styl-844x178', 'compile-img-8
 
 gulp.task('compile-banner-adtech-844x178', ['compile-html-adtech-844x178'], function(){
 
-    return gulp.src(['./dist/public-adtech/844x178/index.html', './dist/public-adtech/844x178/image.jpg', './dist/public-adtech/844x178/logo.svg', './dist/public-adtech/844x178/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/844x178/index.html', './dist/public-adtech/844x178/image.jpg', './dist/public-adtech/844x178/logo.png', './dist/public-adtech/844x178/stroke.svg'])
         .pipe(zip('Banner_V2_844x178-adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-844x178', ['compile-html-adtoma-844x178'], function(){
 
-    return gulp.src(['./dist/public-adtoma/844x178/index.html', './dist/public-adtech/844x178/image.jpg', './dist/public-adtoma/844x178/logo.svg', './dist/public-adtoma/844x178/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/844x178/index.html', './dist/public-adtech/844x178/image.jpg', './dist/public-adtoma/844x178/logo.png', './dist/public-adtoma/844x178/stroke.svg'])
         .pipe(zip('Banner_V2_844x178-adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -1008,14 +1008,14 @@ gulp.task('compile-html-adtoma-980x240', ['compile-styl-980x240', 'compile-img-9
 
 gulp.task('compile-banner-adtech-980x240', ['compile-html-adtech-980x240'], function(){
 
-    return gulp.src(['./dist/public-adtech/980x240/index.html', './dist/public-adtech/980x240/image.jpg', './dist/public-adtech/980x240/logo.svg', './dist/public-adtech/980x240/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/980x240/index.html', './dist/public-adtech/980x240/image.jpg', './dist/public-adtech/980x240/logo.png', './dist/public-adtech/980x240/stroke.svg'])
         .pipe(zip('Banner_V2_980x240-adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-980x240', ['compile-html-adtoma-980x240'], function(){
 
-    return gulp.src(['./dist/public-adtoma/980x240/index.html', './dist/public-adtech/980x240/image.jpg', './dist/public-adtoma/980x240/logo.svg', './dist/public-adtoma/980x240/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/980x240/index.html', './dist/public-adtech/980x240/image.jpg', './dist/public-adtoma/980x240/logo.png', './dist/public-adtoma/980x240/stroke.svg'])
         .pipe(zip('Banner_V2_980x240-adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
