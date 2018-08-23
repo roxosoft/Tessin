@@ -11,14 +11,14 @@
 
 .b-banner {
   font-family: font, sans-serif;
-  width: 320px;
-  height: 320px;
+  width: 200px;
+  height: 600px;
   background: rgba(255, 255, 255, 1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom center;
@@ -28,8 +28,8 @@
   line-height: 18px;
   text-decoration: none;
   box-sizing: border-box;
+  padding: 32px 0;
   cursor: pointer;
-  padding-left: 23px;
 
   &>* {
     text-decoration: none;
@@ -39,10 +39,11 @@
 }
 
 .b-header {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 300;
-  margin-top: 29px;
-  margin-bottom: 23px;
+  text-align: center;
+  line-height: 1.2;
+
   b {
     font-weight: 700;
   }
@@ -50,23 +51,22 @@
 
 
 .b-text {
-  font-size: 15px;
-  color: #717073;
+  color: #606060;
   font-weight: bold;
-}
-
-.b-text-just {
-  font-size: 80%;
-  font-weight: 400;
-  position: relative;
-  top: 22px;
-  z-index: 1;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.6;
 
   span {
     display: block;
     color: rgba(15, 173, 140, 1);
     font-weight: bold;
     text-transform: uppercase;
+  }
+
+  &._small {
+    font-size: 13px;
+    font-weight: 400;
   }
 }
 
@@ -80,7 +80,6 @@
   text-align: center;
   width: 145px;
   font-weight: 400;
-  margin-top: 37px;
 
   transition: .1s all ease-in-out;
 
@@ -89,24 +88,15 @@
   }
 }
 
-.b-desc {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  padding-right: 14px;
-  box-sizing: border-box;
-}
-
 .b-illustration {
-  left: -23px;
   position: relative;
   overflow: visible;
   height: fit-content;
+  width: 100%;
 
   .back {
-    height: 65px;
-    width: 320px;
+    height: 229px;
+    width: 200px;
     object-fit: cover;
   }
 

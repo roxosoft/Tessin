@@ -2,38 +2,41 @@
 <!-- inject-css ../../../dist/test/250x360/style.css -->
 
 <script>
-  var clickTag = 'https://tessin.se';
-  var clickUrl = '_ADCLICK_';
-  function clickit(id){
-    if (id === 'static') {
-        window.open(clickTag);
-    } else if (id === 'quad_ADTIME_') {
-        window.open(clickUrl, '_blank');
-    }
+    var clickTag = 'https://tessin.se';
+    var clickUrl = '_ADCLICK_';
+    function clickit(id){
+        if (id === 'static') {
+            window.open(clickTag);
+        } else if (id === 'quad_ADTIME_') {
+            window.open(clickUrl, '_blank');
+        }
 
-  }
+    }
 </script>
 
 {% if _ADPATH_ === undefined %}
 <div class="b-banner wrapper" id="static" onclick="clickit('static')">
-    <div class="b-logo"></div>
-
     <div class="b-header">
         <b>Investera</b> i fastigheter
     </div>
 
     <div class="b-text">
-        Bygg din portfölj med<br />
-        säkerställda fastighetslån
+        Bygg din portfölj med säkerställda fastighetslån
     </div>
 
     <div class="b-button">
         LÄS MER
     </div>
 
-    <div class="b-text _small">
-        <span>JUST NU</span>
-        Slutsålda kedjehus i Sollentuna
+    <div class="b-desc">
+        <div class="b-text-just">
+            <span>JUST NU</span>
+            Nyproduktion i expansiva
+            <br/>
+            Aspudden
+        </div>
+
+        <div class="b-logo"></div>
     </div>
 
     <div class="b-illustration">
@@ -46,24 +49,28 @@
 {% if _ADPATH_ !== undefined %}
 <!-- inject-css ../../../dist/test/250x360/font.css -->
 <div class="b-banner wrapper" id="quad_ADTIME_" onclick="clickit('quad_ADTIME_')">
-    <div class="b-logo"></div>
 
     <div class="b-header">
         <b>Investera</b> i fastigheter
     </div>
 
     <div class="b-text">
-        Bygg din portfölj med<br />
-        säkerställda fastighetslån
+        Bygg din portfölj med säkerställda fastighetslån
     </div>
 
     <div class="b-button">
         LÄS MER
     </div>
 
-    <div class="b-text _small">
-        <span>JUST NU</span>
-        Slutsålda kedjehus i Sollentuna
+    <div class="b-desc">
+        <div class="b-text-just">
+            <span>JUST NU</span>
+            Nyproduktion i expansiva
+            <br/>
+            Aspudden
+        </div>
+
+        <div class="b-logo"></div>
     </div>
 
     <div class="b-illustration">
