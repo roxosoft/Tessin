@@ -96,21 +96,26 @@
   box-sizing: border-box;
 }
 
+.b-right {
+  margin-right: 48px;
+}
+
 .b-illustration {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   height: 100%;
-  width: fit-content;
+  width: 372px;
 
   .back {
-    height: 240px;
-    width: 363px;
+    height: 282px;
+    width: 388px;
     object-fit: cover;
+    object-position: -15px -7px;
   }
 
   .stroke {
     position: absolute;
     top: 0;
-    left: 8px;
+    left: 0;
   }
 }
