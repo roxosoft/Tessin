@@ -108,14 +108,14 @@ gulp.task('compile-html-adtoma-160x600', ['compile-styl-160x600', 'compile-img-1
 
 gulp.task('compile-banner-adtech-160x600', ['compile-html-adtech-160x600'], function(){
 
-    return gulp.src(['./dist/public-adtech/160x600/index.html', './dist/public-adtech/160x600/image.png', './dist/public-adtech/160x600/logo.svg', './dist/public-adtech/160x600/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/160x600/index.html', './dist/public-adtech/160x600/image.jpg', './dist/public-adtech/160x600/logo.svg', './dist/public-adtech/160x600/stroke.svg'])
         .pipe(zip('V2_160x600_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-160x600', ['compile-html-adtoma-160x600'], function(){
 
-    return gulp.src(['./dist/public-adtoma/160x600/index.html', './dist/public-adtech/160x600/image.png', './dist/public-adtoma/160x600/logo.svg', './dist/public-adtoma/160x600/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/160x600/index.html', './dist/public-adtech/160x600/image.jpg', './dist/public-adtoma/160x600/logo.svg', './dist/public-adtoma/160x600/stroke.svg'])
         .pipe(zip('V2_160x600_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -208,14 +208,14 @@ gulp.task('compile-html-adtoma-200x600', ['compile-styl-200x600', 'compile-img-2
 
 gulp.task('compile-banner-adtech-200x600', ['compile-html-adtech-200x600'], function(){
 
-    return gulp.src(['./dist/public-adtech/200x600/index.html', './dist/public-adtech/200x600/image.png', './dist/public-adtech/200x600/logo.svg', './dist/public-adtech/200x600/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/200x600/index.html', './dist/public-adtech/200x600/image.jpg', './dist/public-adtech/200x600/logo.svg', './dist/public-adtech/200x600/stroke.svg'])
         .pipe(zip('V2_200x600_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-200x600', ['compile-html-adtoma-200x600'], function(){
 
-    return gulp.src(['./dist/public-adtoma/200x600/index.html', './dist/public-adtech/200x600/image.png', './dist/public-adtoma/200x600/logo.svg', './dist/public-adtoma/200x600/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/200x600/index.html', './dist/public-adtech/200x600/image.jpg', './dist/public-adtoma/200x600/logo.svg', './dist/public-adtoma/200x600/stroke.svg'])
         .pipe(zip('V2_200x600_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -308,14 +308,14 @@ gulp.task('compile-html-adtoma-250x360', ['compile-styl-250x360', 'compile-img-2
 
 gulp.task('compile-banner-adtech-250x360', ['compile-html-adtech-250x360'], function(){
 
-    return gulp.src(['./dist/public-adtech/250x360/index.html', './dist/public-adtech/250x360/image.png', './dist/public-adtech/250x360/logo.svg', './dist/public-adtech/250x360/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/250x360/index.html', './dist/public-adtech/250x360/image.jpg', './dist/public-adtech/250x360/logo.svg', './dist/public-adtech/250x360/stroke.svg'])
         .pipe(zip('V2_250x360_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-250x360', ['compile-html-adtoma-250x360'], function(){
 
-    return gulp.src(['./dist/public-adtoma/250x360/index.html', './dist/public-adtech/250x360/image.png', './dist/public-adtoma/250x360/logo.svg', './dist/public-adtoma/250x360/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/250x360/index.html', './dist/public-adtech/250x360/image.jpg', './dist/public-adtoma/250x360/logo.svg', './dist/public-adtoma/250x360/stroke.svg'])
         .pipe(zip('V2_250x360_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -408,14 +408,14 @@ gulp.task('compile-html-adtoma-300x250', ['compile-styl-300x250', 'compile-img-3
 
 gulp.task('compile-banner-adtech-300x250', ['compile-html-adtech-300x250'], function(){
 
-    return gulp.src(['./dist/public-adtech/300x250/index.html', './dist/public-adtech/300x250/image.png', './dist/public-adtech/300x250/logo.svg', './dist/public-adtech/300x250/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/300x250/index.html', './dist/public-adtech/300x250/image.jpg', './dist/public-adtech/300x250/logo.svg', './dist/public-adtech/300x250/stroke.svg'])
         .pipe(zip('V2_300x250_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-300x250', ['compile-html-adtoma-300x250'], function(){
 
-    return gulp.src(['./dist/public-adtoma/300x250/index.html', './dist/public-adtech/300x250/image.png', './dist/public-adtoma/300x250/logo.svg', './dist/public-adtoma/300x250/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/300x250/index.html', './dist/public-adtech/300x250/image.jpg', './dist/public-adtoma/300x250/logo.svg', './dist/public-adtoma/300x250/stroke.svg'])
         .pipe(zip('V2_300x250_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -508,14 +508,14 @@ gulp.task('compile-html-adtoma-320x320', ['compile-styl-320x320', 'compile-img-3
 
 gulp.task('compile-banner-adtech-320x320', ['compile-html-adtech-320x320'], function(){
 
-    return gulp.src(['./dist/public-adtech/320x320/index.html', './dist/public-adtech/320x320/image.png', './dist/public-adtech/320x320/logo.svg', './dist/public-adtech/320x320/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/320x320/index.html', './dist/public-adtech/320x320/image.jpg', './dist/public-adtech/320x320/logo.svg', './dist/public-adtech/320x320/stroke.svg'])
         .pipe(zip('V2_320x320_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-320x320', ['compile-html-adtoma-320x320'], function(){
 
-    return gulp.src(['./dist/public-adtoma/320x320/index.html', './dist/public-adtech/320x320/image.png', './dist/public-adtoma/320x320/logo.svg', './dist/public-adtoma/320x320/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/320x320/index.html', './dist/public-adtech/320x320/image.jpg', './dist/public-adtoma/320x320/logo.svg', './dist/public-adtoma/320x320/stroke.svg'])
         .pipe(zip('V2_320x320_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -608,14 +608,14 @@ gulp.task('compile-html-adtoma-468x240', ['compile-styl-468x240', 'compile-img-4
 
 gulp.task('compile-banner-adtech-468x240', ['compile-html-adtech-468x240'], function(){
 
-    return gulp.src(['./dist/public-adtech/468x240/index.html', './dist/public-adtech/468x240/image.png', './dist/public-adtech/468x240/logo.svg', './dist/public-adtech/468x240/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/468x240/index.html', './dist/public-adtech/468x240/image.jpg', './dist/public-adtech/468x240/logo.svg', './dist/public-adtech/468x240/stroke.svg'])
         .pipe(zip('V2_468x240_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-468x240', ['compile-html-adtoma-468x240'], function(){
 
-    return gulp.src(['./dist/public-adtoma/468x240/index.html', './dist/public-adtech/468x240/image.png', './dist/public-adtoma/468x240/logo.svg', './dist/public-adtoma/468x240/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/468x240/index.html', './dist/public-adtech/468x240/image.jpg', './dist/public-adtoma/468x240/logo.svg', './dist/public-adtoma/468x240/stroke.svg'])
         .pipe(zip('V2_468x240_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -708,14 +708,14 @@ gulp.task('compile-html-adtoma-480x280', ['compile-styl-480x280', 'compile-img-4
 
 gulp.task('compile-banner-adtech-480x280', ['compile-html-adtech-480x280'], function(){
 
-    return gulp.src(['./dist/public-adtech/480x280/index.html', './dist/public-adtech/480x280/image.png', './dist/public-adtech/480x280/logo.svg', './dist/public-adtech/480x280/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/480x280/index.html', './dist/public-adtech/480x280/image.jpg', './dist/public-adtech/480x280/logo.svg', './dist/public-adtech/480x280/stroke.svg'])
         .pipe(zip('V2_480x280_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-480x280', ['compile-html-adtoma-480x280'], function(){
 
-    return gulp.src(['./dist/public-adtoma/480x280/index.html', './dist/public-adtech/480x280/image.png', './dist/public-adtoma/480x280/logo.svg', './dist/public-adtoma/480x280/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/480x280/index.html', './dist/public-adtech/480x280/image.jpg', './dist/public-adtoma/480x280/logo.svg', './dist/public-adtoma/480x280/stroke.svg'])
         .pipe(zip('V2_480x280_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -808,14 +808,14 @@ gulp.task('compile-html-adtoma-480x320', ['compile-styl-480x320', 'compile-img-4
 
 gulp.task('compile-banner-adtech-480x320', ['compile-html-adtech-480x320'], function(){
 
-    return gulp.src(['./dist/public-adtech/480x320/index.html', './dist/public-adtech/480x320/image.png', './dist/public-adtech/480x320/logo.svg', './dist/public-adtech/480x320/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/480x320/index.html', './dist/public-adtech/480x320/image.jpg', './dist/public-adtech/480x320/logo.svg', './dist/public-adtech/480x320/stroke.svg'])
         .pipe(zip('V2_480x320_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-480x320', ['compile-html-adtoma-480x320'], function(){
 
-    return gulp.src(['./dist/public-adtoma/480x320/index.html', './dist/public-adtech/480x320/image.png', './dist/public-adtoma/480x320/logo.svg', './dist/public-adtoma/480x320/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/480x320/index.html', './dist/public-adtech/480x320/image.jpg', './dist/public-adtoma/480x320/logo.svg', './dist/public-adtoma/480x320/stroke.svg'])
         .pipe(zip('V2_480x320_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -908,14 +908,14 @@ gulp.task('compile-html-adtoma-844x178', ['compile-styl-844x178', 'compile-img-8
 
 gulp.task('compile-banner-adtech-844x178', ['compile-html-adtech-844x178'], function(){
 
-    return gulp.src(['./dist/public-adtech/844x178/index.html', './dist/public-adtech/844x178/image.png', './dist/public-adtech/844x178/logo.svg', './dist/public-adtech/844x178/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/844x178/index.html', './dist/public-adtech/844x178/image.jpg', './dist/public-adtech/844x178/logo.svg', './dist/public-adtech/844x178/stroke.svg'])
         .pipe(zip('V2_844x178_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-844x178', ['compile-html-adtoma-844x178'], function(){
 
-    return gulp.src(['./dist/public-adtoma/844x178/index.html', './dist/public-adtech/844x178/image.png', './dist/public-adtoma/844x178/logo.svg', './dist/public-adtoma/844x178/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/844x178/index.html', './dist/public-adtech/844x178/image.jpg', './dist/public-adtoma/844x178/logo.svg', './dist/public-adtoma/844x178/stroke.svg'])
         .pipe(zip('V2_844x178_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
@@ -1008,14 +1008,14 @@ gulp.task('compile-html-adtoma-980x240', ['compile-styl-980x240', 'compile-img-9
 
 gulp.task('compile-banner-adtech-980x240', ['compile-html-adtech-980x240'], function(){
 
-    return gulp.src(['./dist/public-adtech/980x240/index.html', './dist/public-adtech/980x240/image.png', './dist/public-adtech/980x240/logo.svg', './dist/public-adtech/980x240/stroke.svg'])
+    return gulp.src(['./dist/public-adtech/980x240/index.html', './dist/public-adtech/980x240/image.jpg', './dist/public-adtech/980x240/logo.svg', './dist/public-adtech/980x240/stroke.svg'])
         .pipe(zip('V2_980x240_Adtech.zip'))
         .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('compile-banner-adtoma-980x240', ['compile-html-adtoma-980x240'], function(){
 
-    return gulp.src(['./dist/public-adtoma/980x240/index.html', './dist/public-adtech/980x240/image.png', './dist/public-adtoma/980x240/logo.svg', './dist/public-adtoma/980x240/stroke.svg'])
+    return gulp.src(['./dist/public-adtoma/980x240/index.html', './dist/public-adtech/980x240/image.jpg', './dist/public-adtoma/980x240/logo.svg', './dist/public-adtoma/980x240/stroke.svg'])
         .pipe(zip('V2_980x240_Adtoma.zip'))
         .pipe(gulp.dest('./dist/'));
 });
