@@ -1,109 +1,112 @@
-@import 'normalize.styl';
 
-.b-logo {
-  background-image: url('logo.svg');
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 48px;
-  width: 66px;
-}
-
-.b-banner {
-  font-family: font, Segoe UI, sans-serif;
-  width: 200px;
-  height: 600px;
-  background: rgba(255, 255, 255, 1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom center;
-  color: rgba(80, 80, 80, 1);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 18px;
-  text-decoration: none;
-  box-sizing: border-box;
-  padding: 32px 0;
-  cursor: pointer;
-
-  &>* {
-    text-decoration: none;
+  .b-logo {
+    background-image: url('logo.svg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 48px;
+    width: 66px;
   }
 
-
-}
-
-.b-header {
-  font-size: 23px;
-  font-weight: 300;
-  text-align: center;
-  line-height: 1.2;
-
-  b {
-    font-weight: 700;
-  }
-}
-
-
-.b-text {
-  color: #606060;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  line-height: 1.6;
-
-  span {
-    display: block;
-    color: rgba(15, 173, 140, 1);
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  &._small {
-    color: black;
-    font-size: 13px;
-    font-weight: 400;
-  }
-}
-
-.b-button {
-  background-color: rgba(133, 74, 213, 1);
-  cursor: pointer;
-  text-transform: uppercase;
-  color: white;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
-  width: 145px;
-  font-weight: 400;
-
-  transition: .1s all ease-in-out;
-
-  &:hover {
-    background-color: darken(rgba(133, 74, 213, 1), 10);
-  }
-}
-
-.b-illustration {
-  position: relative;
-  overflow: visible;
-  height: 229px;
-  width: 100%;
-
-  .back {
-    height: 229px;
+  .b-banner {
+    font-family: font, Segoe UI, sans-serif;
     width: 200px;
-    object-fit: cover;
+    height: 600px;
+    background: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    color: rgba(80, 80, 80, 1);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 32px 0;
+    cursor: pointer;
+
+    margin: 0;
+    * {
+      box-sizing: border-box;
+    }
+
+    & > * {
+      text-decoration: none;
+    }
+
   }
 
-  .stroke {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .b-header {
+    font-size: 23px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.2;
+
+    b {
+      font-weight: 700;
+    }
   }
-}
+
+  .b-text {
+    color: #606060;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.6;
+
+    span {
+      display: block;
+      color: rgba(15, 173, 140, 1);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &._small {
+      color: black;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  .b-button {
+    background-color: rgba(133, 74, 213, 1);
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    width: 145px;
+    font-weight: 400;
+
+    transition: .1s all ease-in-out;
+
+    &:hover {
+      background-color: darken(rgba(133, 74, 213, 1), 10);
+    }
+  }
+
+  .b-illustration {
+    position: relative;
+    overflow: visible;
+    height: 229px;
+    width: 100%;
+
+    .back {
+      height: 229px;
+      width: 200px;
+      object-fit: cover;
+    }
+
+    .stroke {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+

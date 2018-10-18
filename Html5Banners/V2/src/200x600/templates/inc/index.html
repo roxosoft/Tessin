@@ -13,13 +13,13 @@
 
     }
 </script>
-
+<div id="tessin-banner">
 {% if _ADPATH_ === undefined %}
-<div class="b-banner wrapper" id="static" onclick="clickit('static')">
+<div class="b-banner wrapper" id="static tessin-banner" onclick="clickit('static')">
 {% endif %}
 {% if _ADPATH_ !== undefined %}
 <!-- inject-css ../../../dist/styles/200x600/font.css -->
-<div class="b-banner wrapper" id="quad_ADTIME_" onclick="clickit('quad_ADTIME_')">
+<div class="b-banner wrapper" id="quad_ADTIME_ tessin-banner" onclick="clickit('quad_ADTIME_')">
 {% endif %}
     <div class="b-logo"></div>
 
@@ -44,4 +44,5 @@
         <span>JUST NU</span>
         Slutsålda kedjehus i Sollentuna
     </div>
+</div>
 </div>
